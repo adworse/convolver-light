@@ -1,10 +1,10 @@
 # Convolver-Light
 
-This is native-only version of neilslater's https://github.com/neilslater/convolver
+This is native-only version of [neilslater's](https://github.com/neilslater) [Convolver Gem](https://github.com/neilslater/convolver)
 
 FFTF3 dependency is removed, so calculations would be slow on big matrices. Use it only if you need to make a convolution with a small kernel.
 
-All the credits to the author, https://github.com/neilslater
+All the credits to the [author](https://github.com/neilslater)
 
 ### Installing the gem
 
@@ -24,7 +24,7 @@ Or install it yourself as:
 
     require 'convolver-light
 
-Usage is exactly the same as of original gem, please refer to the author's page
+Usage is exactly the same as of original gem, please refer to the [author's page](https://github.com/neilslater/convolver)
 
 ```
 a = NArray[0.3,0.4,0.5]
