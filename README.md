@@ -1,27 +1,16 @@
-# Convolver
+# Convolver-Light
 
-[![Gem Version](https://badge.fury.io/rb/convolver.png)](http://badge.fury.io/rb/convolver)
-[![Build Status](https://travis-ci.org/neilslater/convolver.png?branch=master)](http://travis-ci.org/neilslater/convolver)
-[![Coverage Status](https://coveralls.io/repos/neilslater/convolver/badge.png?branch=master)](https://coveralls.io/r/neilslater/convolver?branch=master)
-[![Inline docs](http://inch-ci.org/github/neilslater/convolver.png?branch=master)](http://inch-ci.org/github/neilslater/convolver)
-[![Code Climate](https://codeclimate.com/github/neilslater/convolver.png)](https://codeclimate.com/github/neilslater/convolver)
-[![Dependency Status](https://gemnasium.com/neilslater/convolver.png)](https://gemnasium.com/neilslater/convolver)
+This is native-only version of neilslater's https://github.com/neilslater/convolver
 
-Calculates discrete convolution between two multi-dimensional arrays of floats.
-See http://en.wikipedia.org/wiki/Convolution
+FFTF3 dependency is removed, so calculations would be slow on big matrices. Use it only if you need to make a convolution with a small kernel.
 
-## Installation
-
-### Dependency: FFTW3
-
-Before you install *convolver*, you should install the FFTW3 library on your system.
-See http://www.fftw.org/ for details.
+All the credits to the author, https://github.com/neilslater
 
 ### Installing the gem
 
 Add this line to your application's Gemfile:
 
-    gem 'convolver'
+    gem 'convolver-light'
 
 And then execute:
 
@@ -29,35 +18,17 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install convolver
+    $ gem install convolver-light
 
 ## Usage
 
-Basic convolution:
+    require 'convolver-light
 
-    a = NArray[0.3,0.4,0.5]
-    b = NArray[1.3, -0.5]
-    c = Convolver.convolve( a, b )
-    => NArray.float(2): [ 0.19, 0.27 ]
+Usage is exactly the same as of original gem, please refer to the author's page
 
- * Convolver only works on single-precision floats internally. It will cast NArray types to this, if
-possible, prior to calculating. For best speed, use NArray.sfloat arrays.
-
- * The output is smaller than the input, it only contains fully-calculated values. The output size
-is the original size, minus the kernel size, plus 1, in each dimension.
-
- * Convolver expects input a and kernel b to have the same rank, and for the kernel to be same size
-or smaller in all dimensions as the input.
-
- * Convolver.convolve will try to choose the faster of two approaches it has coded. In general,
-small convolutions are processed directly by multiplying out all combinations and summing them,
-and large convolutions are processed using FFTW3 to convert to frequency space where convolution
-is simpler and faster to calculate, then convert back.
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+```
+a = NArray[0.3,0.4,0.5]
+b = NArray[1.3, -0.5]
+c = Convolver.convolve( a, b )
+=> NArray.float(2): [ 0.19, 0.27 ]
+```
