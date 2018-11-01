@@ -2,7 +2,7 @@
 
 This is native-only version of [neilslater's](https://github.com/neilslater) [Convolver Gem](https://github.com/neilslater/convolver)
 
-FFTF3 dependency is removed, so calculations would be slow on big matrices. Use it only if you need to make a convolution with a small kernel.
+FFTW3 dependency is removed, so calculations would be slow on big matrices. Use it only if you need to make a convolution with a small kernel.
 
 All the credits to the [author](https://github.com/neilslater)
 
