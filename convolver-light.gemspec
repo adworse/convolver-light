@@ -4,17 +4,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'convolver/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "convolver"
+  spec.name          = "convolver-light"
   spec.version       = Convolver::VERSION
   spec.authors       = ["Neil Slater"]
   spec.email         = ["slobo777@gmail.com"]
   spec.description   = %q{Convolution for NArray}
   spec.summary       = %q{Convolution for NArray}
-  spec.homepage      = "http://github.com/neilslater/convolver"
+  spec.homepage      = "http://github.com/adworse/convolver-light"
   spec.license       = "MIT"
 
   spec.add_dependency "narray", ">= 0.6.0.8"
-  spec.add_dependency "fftw3", ">= 0.3"
 
   spec.add_development_dependency "yard", ">= 0.8.7.2"
   spec.add_development_dependency "bundler", ">= 1.3"

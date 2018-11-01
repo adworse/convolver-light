@@ -17,3 +17,7 @@ test/tmp
 test/version_tmp
 tmp
 benchmarks
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store

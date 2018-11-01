@@ -8,7 +8,7 @@ RSpec::Core::RakeTask.new(:test) do |t|
   t.verbose = true
 end
 
-gemspec = Gem::Specification.load('convolver.gemspec')
+gemspec = Gem::Specification.load('convolver-light.gemspec')
 Rake::ExtensionTask.new do |ext|
   ext.name = 'convolver'
   ext.source_pattern = "*.{c,h}"
