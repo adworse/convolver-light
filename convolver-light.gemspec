@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Convolver::VERSION
   spec.authors       = ['Dima Ermilov']
   spec.email         = ['dima@scriptangle.com']
-  spec.description   = 'Simplification of convolver gem, FFTW removed, suitable only for smaller kernels. Convolver gem author is Neil Slater, slobo777@gmail.com, https://github.com/neilslater'
-  spec.summary       = 'Convolution for NArray simplified.'
+  spec.description   = 'Convolution for NArray simplified.'
+  spec.summary       = 'Simplification of convolver gem, FFTW removed, suitable only for smaller kernels. Convolver gem author is Neil Slater, slobo777@gmail.com, https://github.com/neilslater'
   spec.homepage      = 'http://github.com/adworse/convolver-light'
   spec.license       = 'MIT'
 
