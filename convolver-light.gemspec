@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'convolver/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "convolver-light"
+  spec.name          = 'convolver-light'
   spec.version       = Convolver::VERSION
-  spec.authors       = ["Neil Slater"]
-  spec.email         = ["slobo777@gmail.com"]
-  spec.description   = %q{Convolution for NArray}
-  spec.summary       = %q{Convolution for NArray}
-  spec.homepage      = "http://github.com/adworse/convolver-light"
-  spec.license       = "MIT"
+  spec.authors       = ['Neil Slater', 'Dima Ermilov']
+  spec.email         = ['slobo777@gmail.com', 'dima@scriptangle.com']
+  spec.description   = 'Simplification of convolver gem, FFTW removed, suitable only for smaller kernels'
+  spec.summary       = 'Convolution for NArray simplified.'
+  spec.homepage      = 'http://github.com/adworse/convolver-light'
+  spec.license       = 'MIT'
 
   spec.add_dependency "narray", ">= 0.6.0.8"
 
