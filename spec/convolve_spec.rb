@@ -36,14 +36,6 @@ describe Convolver do
       c = Convolver.convolve( a, b )
     end
 
-    it "should choose #convolve_fftw3 for large inputs" do
-      a = NArray.sfloat(500,500).random()
-      b = NArray.sfloat(100,100).random()
-      expect(Convolver).to receive(:convolve_fftw3).once
-      expect(Convolver).to_not receive(:convolve_basic)
-      c = Convolver.convolve( a, b )
-    end
-
   end
 
 end
