@@ -3,7 +3,7 @@ require 'coveralls'
 
 Coveralls.wear!
 
-require 'convolver'
+require 'convolver-light'
 
 # Matcher compares NArrays numerically
 RSpec::Matchers.define :be_narray_like do |expected_narray, mse = 1e-9|
