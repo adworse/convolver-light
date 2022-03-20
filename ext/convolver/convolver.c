@@ -3,7 +3,13 @@
 #include <ruby.h>
 #include "narray.h"
 #include <stdio.h>
-#include <xmmintrin.h>
+
+#include "arch_detector.h"
+#ifdef ARCH_ARM
+  #include "sse2neon.h"
+#else
+  #include <xmmintrin.h>
+#endif
 
 #include "narray_shared.h"
 #include "convolve_raw.h"
