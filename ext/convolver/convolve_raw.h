@@ -9,7 +9,14 @@
 #define CONVOLVE_RAW_H
 
 #include <ruby.h>
-#include <xmmintrin.h>
+
+#include "arch_detector.h"
+#ifdef ARCH_ARM
+  #include "sse2neon.h"
+#else
+  #include <xmmintrin.h>
+#endif
+
 #include "narray_shared.h"
 
 #define LARGEST_RANK 16
