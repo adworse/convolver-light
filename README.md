@@ -1,5 +1,9 @@
 # Convolver-Light
 
+# Version 0.3.3 note:
+Huge thanks to [Rim Zaidullin](https://github.com/tinybit) for adding Apple M1 support in 0.3.3.
+
+
 This is native-only version of [neilslater's](https://github.com/neilslater) [Convolver Gem](https://github.com/neilslater/convolver)
 
 FFTW3 dependency is removed, so calculations would be slow on big matrices. Use it only if you need to make a convolution with a small kernel.
